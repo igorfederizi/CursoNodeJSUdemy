@@ -15,7 +15,18 @@ res.send("bem vindo ao blog")
 });
 
 app.get("/canal/youtube", function(req, res) {
-    res.send("Bem vindo ao youtube");
+    var canal = req.query["canal"]
+    res.send(canal);
+})
+
+//rota com parâmetro
+app.get("/ola/:nome", function(req, res) {
+
+    // req dados enviados pelo usuário
+    // ressão dados que serão devolvido ao usuário
+    res.send("OI");
+
+
 })
 
 
